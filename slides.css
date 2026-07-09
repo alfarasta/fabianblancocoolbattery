@@ -1,0 +1,298 @@
+/* =========================================================
+   ESTILOS ESPECÍFICOS POR SLIDE
+   ========================================================= */
+
+.slide__body {
+  position: absolute;
+  top: 112px;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+}
+
+/* ---------- Logo recreation (Cool Battery) ----------
+   Referencia: wordmark itálico en bloque, COOL amarillo con
+   contorno negro grueso, BATTERY blanco con contorno negro,
+   sobre fondo cian, marca ® superíndice. ---------- */
+.logo-mark {
+  width: 132px;
+  height: 84px;
+  background: #29c5f0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.logo-mark__cool {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-style: italic;
+  font-size: 30px;
+  color: var(--cb-yellow);
+  -webkit-text-stroke: 2px var(--cb-black);
+  paint-order: stroke fill;
+  transform: skewX(-8deg) scaleY(1.06);
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.logo-mark__battery {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--cb-white);
+  -webkit-text-stroke: 1.3px var(--cb-black);
+  paint-order: stroke fill;
+  transform: skewX(-8deg);
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-top: 2px;
+}
+.logo-mark__reg {
+  font-size: 9px;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--cb-black);
+  -webkit-text-stroke: 0;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+/* ================= SLIDE 1 — COVER ================= */
+.s1 { display: flex; height: 100%; }
+.s1__left {
+  width: 60%;
+  padding: 56px 56px 48px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.s1__right {
+  width: 40%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.s1__top { display:flex; flex-direction:column; gap:28px; }
+.s1__title { font-size: 50px; }
+.s1__divider { margin-top: 8px; border-top: 1px solid var(--cb-gray-200); padding-top: 22px; }
+.s1__meta { display: flex; gap: 60px; }
+.s1__meta div { display:flex; flex-direction:column; gap:6px; }
+.s1__meta .label { font-size:11px; font-weight:700; letter-spacing:.1em; color: var(--cb-gray-400); text-transform:uppercase;}
+.s1__meta .value { font-family: var(--font-display); font-weight:700; font-size:16px; color: var(--cb-black);}
+.s1__pagenum { font-size:13px; color: rgba(255,255,255,0.7); font-weight:600; }
+.s1__tagline { font-family: var(--font-display); font-weight:700; font-size:22px; color: var(--cb-white); line-height:1.35; }
+
+/* ================= SLIDE 2 — DIAGNÓSTICO ================= */
+.s2 { display:flex; gap:56px; height: calc(100% - 20px); }
+.s2__left { flex: 1.35; display:flex; flex-direction:column; gap:22px; padding-top: 6px;}
+.s2__list { display:flex; flex-direction:column; }
+.s2__item { display:flex; gap:22px; padding: 16px 0; border-bottom: 1px solid var(--cb-gray-100); align-items:flex-start; }
+.s2__item:last-child { border-bottom:none; }
+.s2__item .num-tag { width:34px; flex-shrink:0; }
+.s2__item p { font-family: var(--font-body); font-size:17px; color: var(--cb-ink); font-weight:400; }
+.s2__right {
+  flex: 1;
+  border-radius: 8px;
+  padding: 36px 30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  color: var(--cb-white);
+}
+.s2__right .big-num { font-family: var(--font-display); font-weight:900; font-size:96px; color:var(--cb-white); line-height:1;}
+.s2__right .label { font-size:14px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color: rgba(255,255,255,0.85); line-height:1.4;}
+.s2__right .quote { font-style: italic; font-weight:300; font-size:15px; color: rgba(255,255,255,0.85); border-top:1px solid rgba(255,255,255,0.25); padding-top:16px; }
+
+/* ================= SLIDE 3 — PROBLEMA DE FONDO ================= */
+.s3__body { display:flex; flex-direction:column; gap:34px; height:100%; padding-top: 4px;}
+.s3__cols { display:grid; grid-template-columns: repeat(4, 1fr); gap: 26px; flex:1; }
+.s3__col { display:flex; flex-direction:column; gap:14px; border-top: 1px solid rgba(255,255,255,0.25); padding-top:18px; }
+.s3__col-icon { width:44px; height:44px; border-radius:50%; background: rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; }
+.s3__col-icon svg { width:22px; height:22px; color: var(--cb-yellow); }
+.s3__col h4 { font-family: var(--font-display); font-weight:700; font-size:19px; color: var(--cb-white); line-height:1.25; }
+.s3__col p { font-size:14.5px; color: rgba(255,255,255,0.72); line-height:1.5; }
+.s3__quote { font-style:italic; font-weight:300; font-size:19px; color: var(--cb-yellow); font-family: var(--font-body); }
+
+/* ================= SLIDE 4 — LA OPORTUNIDAD ================= */
+.s4__body { display:flex; flex-direction:column; gap:26px; height:100%; }
+.s4__cards { display:grid; grid-template-columns: repeat(4,1fr); gap:20px; flex:1; }
+.s4__card { border-radius: 4px; padding: 30px 24px; display:flex; flex-direction:column; justify-content:space-between; }
+.s4__card--fill { background: var(--cb-green-500); color: var(--cb-white); }
+.s4__card--tint { background: var(--cb-green-tint); color: var(--cb-ink); }
+.s4__card h4 { font-family: var(--font-display); font-weight:700; font-size:19px; margin: 18px 0 30px; line-height:1.25;}
+.s4__card--tint h4 { color: var(--cb-black); }
+.s4__card p { font-size:14px; line-height:1.5; }
+.s4__card--fill p { color: rgba(255,255,255,0.85); }
+.s4__card--tint p { color: var(--cb-gray-600); }
+.s4__quote { font-style:italic; font-weight:300; font-size:18px; color: var(--cb-green-600); }
+
+/* ================= SLIDE 5 — VISIÓN (full bleed dark) ================= */
+.s5 { height:100%; display:flex; flex-direction:column; justify-content:center; padding: 0 90px; gap: 34px; }
+.s5__quote { font-family: var(--font-display); font-weight:700; font-size:42px; color: var(--cb-white); line-height:1.35; max-width: 980px; }
+
+/* ================= SLIDE 6 — IDENTIDAD VISUAL (alcance f1) ================= */
+.s6__body { display:flex; flex-direction:column; gap:26px; height:100%; }
+.s6__grid { display:grid; grid-template-columns: 1fr 1fr; gap: 30px 60px; flex:1; align-content:start; }
+.s6__row { display:flex; flex-direction:column; gap:10px; }
+.s6__row p { font-family: var(--font-body); font-size:17px; color: var(--cb-ink); font-weight:400; }
+.s6__result {
+  margin-top:auto;
+  background: var(--cb-green-tint);
+  border-radius: 4px;
+  padding: 18px 26px;
+  display:flex; gap:8px; align-items:center;
+  font-size:16px;
+}
+.s6__result strong { color: var(--cb-green-600); font-weight:700; }
+
+/* ================= SLIDE 7 — SISTEMA DE MARCA (alcance f2) ================= */
+.s7__body { display:flex; flex-direction:column; gap:22px; height:100%; }
+.s7__grid { display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 18px; flex:1; }
+.s7__card { border-radius:4px; padding: 26px 30px; display:flex; gap:20px; align-items:flex-start; }
+.s7__card--fill { background: var(--cb-green-500); color:#fff; }
+.s7__card--tint { background: var(--cb-green-tint); color: var(--cb-ink); }
+.s7__card-text h4 { font-family: var(--font-display); font-weight:700; font-size:19px; margin-bottom:8px; }
+.s7__card--tint h4 { color: var(--cb-black); }
+.s7__card-text p { font-size:14.5px; line-height:1.45; }
+.s7__card--fill p { color: rgba(255,255,255,0.85); }
+.s7__card--tint p { color: var(--cb-gray-600); }
+.s7__result {
+  background: var(--cb-black); border-radius:4px; padding:16px 26px;
+  display:flex; gap:8px; align-items:center; font-size:16px; color: var(--cb-white);
+}
+.s7__result strong { color: var(--cb-yellow); font-weight:700; }
+
+/* ================= SLIDE 8 — NÚCLEO DEL PROGRAMA ================= */
+.s8__body { display:flex; flex-direction:column; gap:18px; height:100%; }
+.s8__grid { display:grid; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(2,1fr); gap:14px; flex:1; }
+.s8__card { border-radius:4px; padding: 20px 22px; display:flex; flex-direction:column; gap:10px; }
+.s8__card--fill { background: var(--cb-green-500); color:#fff; }
+.s8__card--tint { background: var(--cb-green-tint); color: var(--cb-ink); }
+.s8__card h4 { font-family: var(--font-display); font-weight:700; font-size:16px; }
+.s8__card--tint h4 { color: var(--cb-black); }
+.s8__card .mini-line { width:32px; height:2.5px; border-radius:2px; }
+.s8__card--fill .mini-line { background: var(--cb-yellow); }
+.s8__card--tint .mini-line { background: var(--cb-green-500); }
+.s8__card p { font-size:12.8px; line-height:1.4; }
+.s8__card--fill p { color: rgba(255,255,255,0.85); }
+.s8__card--tint p { color: var(--cb-gray-600); }
+.s8__result { background: var(--cb-black); border-radius:4px; padding:14px 26px; display:flex; gap:8px; align-items:center; font-size:15.5px; color:#fff; }
+.s8__result strong { color: var(--cb-yellow); font-weight:800; }
+
+/* ================= SLIDE 9 — METODOLOGÍA ================= */
+.s9__body { height:100%; display:flex; flex-direction:column; gap:40px; padding-top: 30px; }
+.s9__steps { display:flex; justify-content:space-between; position:relative; padding: 0 20px; }
+.s9__steps::before {
+  content:""; position:absolute; top:38px; left:70px; right:70px; height:1px;
+  background: repeating-linear-gradient(to right, var(--cb-gray-200) 0 8px, transparent 8px 16px);
+  z-index:0;
+}
+.s9__step { display:flex; flex-direction:column; align-items:center; gap:14px; width:180px; text-align:center; position:relative; z-index:1; }
+.s9__step-icon { width:76px; height:76px; border-radius:14px; display:flex; align-items:center; justify-content:center; }
+.s9__step-icon svg { width:34px; height:34px; }
+.s9__step-icon--green { background: var(--cb-green-500); }
+.s9__step-icon--green svg { color:#fff; }
+.s9__step-icon--black { background: var(--cb-black); }
+.s9__step-icon--black svg { color: var(--cb-yellow); }
+.s9__step .num-tag { font-size:16px; }
+.s9__step h4 { font-family: var(--font-display); font-weight:700; font-size:19px; color: var(--cb-black); }
+.s9__step p { font-size:13.5px; color: var(--cb-gray-600); line-height:1.4; }
+
+/* ================= SLIDE 10 — CRONOGRAMA ================= */
+.s10__body { display:flex; flex-direction:column; gap:22px; height:100%; padding-top: 10px; }
+.s10__row { display:flex; align-items:center; gap:26px; }
+.s10__row .row-label { width: 220px; font-family: var(--font-display); font-weight:700; font-size:17px; color: var(--cb-black); flex-shrink:0; }
+.s10__track { flex:1; height:34px; background: var(--cb-green-tint); border-radius:4px; position:relative; overflow:hidden; }
+.s10__fill { position:absolute; left:0; top:0; bottom:0; border-radius:4px; }
+.s10__fill--green { background: var(--cb-green-500); }
+.s10__fill--black { background: var(--cb-black); }
+.s10__row .row-value { width:110px; text-align:right; font-size:14.5px; color: var(--cb-gray-600); font-weight:500; flex-shrink:0;}
+.s10__total { background: var(--cb-black); border-radius:4px; padding:16px 26px; display:flex; gap:10px; align-items:center; font-size:16px; color:#fff; margin-top:auto; }
+.s10__total strong { color: var(--cb-yellow); font-weight:800; }
+
+/* ================= SLIDE 11 — ENTREGABLES FINALES ================= */
+.s11__body { display:flex; flex-direction:column; gap:26px; height:100%; padding-top: 10px;}
+.s11__grid { display:grid; grid-template-columns:1fr 1fr; gap: 20px 60px; flex:1; align-content:start; }
+.s11__item { display:flex; gap:16px; align-items:flex-start; }
+.s11__item .ic { width:30px; height:30px; border-radius:50%; background: rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.s11__item .ic svg { width:16px; height:16px; color: var(--cb-yellow); }
+.s11__item p { font-size:16px; color: rgba(255,255,255,0.9); padding-top:5px; }
+.s11__callout { background: var(--cb-green-500); border-radius:4px; padding:22px 30px; font-style:italic; font-weight:300; font-size:18px; color:#fff; margin-top:auto; }
+
+/* ================= SLIDE 12 — ROI ESPERADO ================= */
+.s12__body { display:flex; flex-direction:column; gap:14px; height:100%; padding-top: 4px;}
+.s12__row { display:flex; align-items:center; gap:24px; padding: 18px 22px; border-radius:4px; }
+.s12__row--tint { background: var(--cb-green-tint); }
+.s12__row .icn { width:46px; height:46px; border-radius:50%; background: var(--cb-white); display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow: 0 2px 6px rgba(0,0,0,0.08);}
+.s12__row .icn svg { width:24px; height:24px; color: var(--cb-green-600); }
+.s12__row .num-tag { width:38px; flex-shrink:0; }
+.s12__row p { font-size:16px; color: var(--cb-ink); }
+.s12__row p strong { color: var(--cb-green-600); font-weight:700; }
+.s12__quote { font-style:italic; font-weight:300; font-size:19px; color: var(--cb-green-600); margin-top:auto; }
+
+/* ================= SLIDE 13 — COTIZACIÓN POR FASE ================= */
+.s13__body { display:flex; flex-direction:column; height:100%; padding-top: 10px; }
+.s13__table { border: 1px solid var(--cb-gray-200); border-radius: 4px; overflow:hidden; }
+.s13__trow { display:flex; justify-content:space-between; align-items:center; padding: 24px 30px; border-bottom: 1px solid var(--cb-gray-200); }
+.s13__trow:last-child { border-bottom:none; }
+.s13__trow .phase { font-size:18px; font-weight:400; color: var(--cb-ink); }
+.s13__trow .amount { font-family: var(--font-display); font-weight:800; font-size:20px; color: var(--cb-green-600); }
+.s13__trow--noamount { justify-content:flex-start; gap: 22px; }
+.s13__trow--noamount .icn { width:40px; height:40px; border-radius:50%; background: var(--cb-green-tint); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.s13__trow--noamount .icn svg { width:20px; height:20px; color: var(--cb-green-600); }
+.s13__trow--noamount .phase { font-weight:600; }
+.s13__total { margin-top:0; background: var(--cb-black); padding: 26px 30px; display:flex; justify-content:space-between; align-items:center; border-radius: 0 0 4px 4px; }
+.s13__total .label { color: var(--cb-yellow); font-weight:800; font-size:14px; letter-spacing:.08em; text-transform:uppercase; font-family: var(--font-display);}
+.s13__total .amount { color:#fff; font-family: var(--font-display); font-weight:800; font-size:28px; }
+.s13__terms { margin-top: 26px; font-size:15.5px; color: var(--cb-gray-600); }
+.s13__terms strong { color: var(--cb-green-600); }
+
+/* ================= SLIDE 14 — TÉRMINOS Y CONDICIONES ================= */
+.s14__body { display:flex; flex-direction:column; gap: 30px; height:100%; padding-top: 14px; }
+.s14__item { display:flex; gap:26px; align-items:flex-start; padding-bottom:22px; border-bottom:1px solid var(--cb-gray-100); }
+.s14__item:last-child { border-bottom: none; }
+.s14__item .num-tag { width:34px; flex-shrink:0; }
+.s14__item p { font-size:17px; color: var(--cb-ink); line-height:1.5; }
+
+/* ================= SLIDE 15 — CIERRE ================= */
+.s15 { height:100%; display:flex; flex-direction:column; justify-content:center; padding: 0 70px; gap: 30px; position:relative; }
+.s15__title { font-family: var(--font-display); font-weight:800; font-size:46px; color:#fff; max-width: 780px; line-height:1.15; }
+.s15__sub { font-style:italic; font-weight:300; font-size:19px; color: rgba(255,255,255,0.8); max-width:700px; }
+.s15__cta { display:flex; align-items:center; justify-content:space-between; gap:30px; margin-top: 20px; }
+.s15__next { flex:1; background: var(--cb-green-500); border-radius:4px; padding:22px 28px; display:flex; gap:18px; align-items:center; }
+.s15__next .ic { width:44px; height:44px; border-radius:8px; background: var(--cb-black); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.s15__next .ic svg { width:22px; height:22px; color: var(--cb-yellow); }
+.s15__next p { font-size:17px; color:#fff; }
+.s15__next p strong { font-weight:700; }
+
+.s15__signfields {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 34px;
+  margin-top: 34px;
+}
+.s15__field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.s15__field-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+.s15__field-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.4);
+}

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cool Battery — Rebranding Estratégico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500;1,700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="slides.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SPRITE DE ICONOGRAFÍA CUSTOM — COOL BATTERY
+     Familia de íconos propios con motivo de energía/batería.
+     Estilo: trazo geométrico, esquinas redondeadas, grosor 6.5,
+     construidos sobre grid de 64x64.
+     ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<defs>
+
+<symbol id="icon-battery-bolt" viewBox="0 0 64 64">
+  <rect x="20" y="6" width="10" height="6" rx="2" fill="currentColor"/>
+  <rect x="12" y="12" width="40" height="46" rx="8" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <path d="M35 22 L24 38 H31 L29 46 L41 30 H34 Z" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-shield-bolt" viewBox="0 0 64 64">
+  <path d="M32 6 L52 14 V30 C52 44 43 54 32 58 C21 54 12 44 12 30 V14 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M36 20 L25 36 H31 L29 44 L40 28 H34 Z" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-fragments" viewBox="0 0 64 64">
+  <rect x="8" y="8" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <rect x="38" y="10" width="18" height="18" rx="4" fill="currentColor"/>
+  <rect x="10" y="38" width="18" height="18" rx="4" fill="currentColor"/>
+  <rect x="38" y="38" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="6.5"/>
+</symbol>
+
+<symbol id="icon-rocket-cell" viewBox="0 0 64 64">
+  <path d="M32 4 C40 4 46 14 46 24 C46 34 40 42 32 58 C24 42 18 34 18 24 C18 14 24 4 32 4 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <circle cx="32" cy="24" r="7" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-growth-bars" viewBox="0 0 64 64">
+  <rect x="8" y="38" width="12" height="20" rx="3" fill="currentColor"/>
+  <rect x="26" y="26" width="12" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <rect x="44" y="12" width="12" height="46" rx="3" fill="currentColor"/>
+  <path d="M8 20 L26 30 L38 18 L56 8" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-handshake" viewBox="0 0 64 64">
+  <path d="M6 30 L18 22 L30 30 L26 38 L14 40 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M58 30 L46 22 L34 30 L38 38 L50 40 Z" fill="currentColor"/>
+  <path d="M26 34 L38 34" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-target" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <circle cx="32" cy="32" r="13" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <circle cx="32" cy="32" r="4" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-hierarchy" viewBox="0 0 64 64">
+  <rect x="24" y="6" width="16" height="14" rx="3" fill="currentColor"/>
+  <rect x="6" y="44" width="16" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <rect x="24" y="44" width="16" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <rect x="42" y="44" width="16" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <path d="M32 20 V32 M14 32 H50 M14 32 V44 M32 32 V44 M50 32 V44" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-document" viewBox="0 0 64 64">
+  <path d="M16 6 H40 L50 16 V58 H16 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M40 6 V16 H50" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M24 30 H42 M24 40 H42 M24 50 H34" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-layers" viewBox="0 0 64 64">
+  <path d="M32 8 L58 22 L32 36 L6 22 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M6 34 L32 48 L58 34" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 46 L32 60 L58 46" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-search" viewBox="0 0 64 64">
+  <circle cx="27" cy="27" r="18" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <path d="M40 40 L56 56" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+  <path d="M27 20 V34 M20 27 H34" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-design" viewBox="0 0 64 64">
+  <path d="M10 54 L40 24 L48 32 L18 62 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M40 24 L48 16 L56 24 L48 32" fill="currentColor" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M6 58 L10 54 L14 58 L10 62 Z" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-check-clipboard" viewBox="0 0 64 64">
+  <rect x="12" y="10" width="40" height="48" rx="6" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <rect x="23" y="4" width="18" height="10" rx="3" fill="currentColor"/>
+  <path d="M21 32 L29 40 L45 24" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-launch" viewBox="0 0 64 64">
+  <path d="M32 4 C42 8 48 20 48 30 C48 40 42 48 32 60 C22 48 16 40 16 30 C16 20 22 8 32 4 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <rect x="26" y="20" width="12" height="18" rx="3" fill="currentColor"/>
+  <path d="M16 44 L8 58 M48 44 L56 58" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-clock-charge" viewBox="0 0 64 64">
+  <circle cx="32" cy="34" r="24" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <path d="M32 20 V34 L42 40" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="24" y="2" width="16" height="8" rx="2" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-coin-bolt" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <path d="M36 18 L24 34 H31 L28 46 L40 30 H33 Z" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-check-circle" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="6.5"/>
+  <path d="M20 33 L28 41 L45 23" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-uniform" viewBox="0 0 64 64">
+  <path d="M22 8 L32 14 L42 8 L54 18 L46 28 L42 24 V58 H22 V24 L18 28 L10 18 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <circle cx="32" cy="34" r="5" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-storefront" viewBox="0 0 64 64">
+  <path d="M8 24 L14 8 H50 L56 24" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M8 24 V56 H56 V24" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <rect x="26" y="38" width="12" height="18" fill="currentColor"/>
+  <path d="M8 24 H56" stroke="currentColor" stroke-width="6.5"/>
+</symbol>
+
+<symbol id="icon-package" viewBox="0 0 64 64">
+  <path d="M32 6 L56 18 V46 L32 58 L8 46 V18 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M8 18 L32 30 L56 18 M32 30 V58" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-signature" viewBox="0 0 64 64">
+  <path d="M10 46 L38 18 L46 26 L18 54 H10 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M38 18 L46 10 L54 18 L46 26" fill="currentColor"/>
+  <path d="M8 58 H56" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-folder" viewBox="0 0 64 64">
+  <path d="M6 18 H24 L30 26 H58 V52 H6 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M6 52 L14 34 H50 L58 52" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linejoin="round"/>
+</symbol>
+
+</defs>
+</svg>
+
+<div class="deck">
+
+<!-- ============================================================ -->
+<!-- SLIDE 1 · PORTADA -->
+<!-- ============================================================ -->
+<section class="slide s1-slide">
+  <div class="s1">
+    <div class="s1__left">
+      <div class="s1__top">
+        <span class="kicker">Rebranding Estratégico</span>
+        <h1 class="h-display s1__title">Roadmap de<br>Transformación<br>de Marca y<br>Estandarización<br>para Franquicia</h1>
+      </div>
+      <div class="s1__divider s1__meta">
+        <div>
+          <span class="label">Cliente</span>
+          <span class="value">Cool Battery</span>
+        </div>
+        <div>
+          <span class="label">Fecha</span>
+          <span class="value">9 de julio, 2026</span>
+        </div>
+        <div>
+          <span class="label">Presentado por</span>
+          <span class="value">Fabián Blanco</span>
+        </div>
+      </div>
+    </div>
+    <div class="s1__right panel-gradient">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; position:relative; z-index:1;">
+        <div class="logo-mark">
+          <div class="logo-mark__cool">COOL<span class="logo-mark__reg">®</span></div>
+          <div class="logo-mark__battery">BATTERY</div>
+        </div>
+      </div>
+      <div style="position:relative; z-index:1;">
+        <span class="s1__pagenum">01 / 15</span>
+      </div>
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; gap:14px;">
+        <span class="kicker" style="color: rgba(255,255,255,0.75);">Propuesta Comercial</span>
+        <p class="s1__tagline">Identidad, sistema de marca<br>y estandarización total.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 2 · DIAGNÓSTICO INICIAL -->
+<!-- ============================================================ -->
+<section class="slide">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Diagnóstico Inicial</span>
+  </div>
+  <div class="slide__body s2">
+    <div class="s2__left">
+      <h2 class="h-title">El estado actual<br>de la marca</h2>
+      <p class="h-eyebrow">Una marca sin sistema no es una marca escalable. Es un riesgo operativo.</p>
+      <div class="s2__list">
+        <div class="s2__item"><span class="num-tag">01</span><p>Aplicaciones inconsistentes del logo entre puntos de contacto</p></div>
+        <div class="s2__item"><span class="num-tag">02</span><p>Ausencia de lineamientos cromáticos y tipográficos documentados</p></div>
+        <div class="s2__item"><span class="num-tag">03</span><p>Sin manual de marca que garantice réplica fiel en nuevas unidades</p></div>
+        <div class="s2__item"><span class="num-tag">04</span><p>Identidad no preparada para operar bajo modelo de franquicia</p></div>
+      </div>
+    </div>
+    <div class="s2__right panel-gradient">
+      <div style="position:relative; z-index:1;">
+        <span class="big-num">00</span>
+      </div>
+      <div style="position:relative; z-index:1; display:flex; flex-direction:column; gap:16px;">
+        <span class="label">Sistemas de marca<br>documentados hoy</span>
+        <div class="rule" style="background: rgba(255,255,255,0.25); margin: 6px 0;"></div>
+      </div>
+      <p class="quote" style="position:relative; z-index:1;">Cada unidad interpreta la marca a su propio criterio.</p>
+    </div>
+  </div>
+  <span class="slide__pagenum">02</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3 · EL PROBLEMA DE FONDO -->
+<!-- ============================================================ -->
+<section class="slide slide--dark panel-gradient">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">El Problema de Fondo</span>
+  </div>
+  <div class="slide__body s3__body">
+    <h2 class="h-title">Por qué esto limita la expansión</h2>
+    <div class="s3__cols">
+      <div class="s3__col">
+        <div class="s3__col-icon"><svg><use href="#icon-fragments"/></svg></div>
+        <span class="num-tag">01</span>
+        <h4>Dilución de Marca</h4>
+        <p>Pérdida de reconocimiento e identidad entre unidades</p>
+      </div>
+      <div class="s3__col">
+        <div class="s3__col-icon"><svg><use href="#icon-shield-bolt"/></svg></div>
+        <span class="num-tag">02</span>
+        <h4>Percepción de Informalidad</h4>
+        <p>Frente a franquiciados, inversionistas y clientes</p>
+      </div>
+      <div class="s3__col">
+        <div class="s3__col-icon"><svg><use href="#icon-clock-charge"/></svg></div>
+        <span class="num-tag">03</span>
+        <h4>Negociaciones Más Largas</h4>
+        <p>Menor valor percibido reduce velocidad de cierre</p>
+      </div>
+      <div class="s3__col">
+        <div class="s3__col-icon"><svg><use href="#icon-check-circle"/></svg></div>
+        <span class="num-tag">04</span>
+        <h4>Cero Control de Calidad</h4>
+        <p>Sin estándar visual que audite cada apertura</p>
+      </div>
+    </div>
+    <p class="s3__quote">Cada unidad sin estándar es una fuga de valor de marca.</p>
+  </div>
+  <span class="slide__pagenum">03</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4 · LA OPORTUNIDAD -->
+<!-- ============================================================ -->
+<section class="slide">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">La Oportunidad</span>
+  </div>
+  <div class="slide__body s4__body">
+    <h2 class="h-title">Qué se gana con una marca estandarizada</h2>
+    <div class="s4__cards">
+      <div class="s4__card s4__card--fill">
+        <div class="icon-tile icon-tile--white"><svg style="color:var(--cb-green-500)"><use href="#icon-launch"/></svg></div>
+        <div>
+          <h4>Apertura Más Rápida</h4>
+          <p>Nuevas unidades sin fricción de diseño</p>
+        </div>
+      </div>
+      <div class="s4__card s4__card--tint">
+        <div class="icon-tile icon-tile--green"><svg style="color:#fff"><use href="#icon-growth-bars"/></svg></div>
+        <div>
+          <h4>Marca como Activo</h4>
+          <p>Valor de negocio, no solo operación</p>
+        </div>
+      </div>
+      <div class="s4__card s4__card--fill">
+        <div class="icon-tile icon-tile--white"><svg style="color:var(--cb-green-500)"><use href="#icon-handshake"/></svg></div>
+        <div>
+          <h4>Mejores Franquiciados</h4>
+          <p>Atraídos por una marca sólida y confiable</p>
+        </div>
+      </div>
+      <div class="s4__card s4__card--tint">
+        <div class="icon-tile icon-tile--green"><svg style="color:#fff"><use href="#icon-target"/></svg></div>
+        <div>
+          <h4>Confianza del Cliente</h4>
+          <p>Consistencia visual en cualquier ubicación</p>
+        </div>
+      </div>
+    </div>
+    <p class="s4__quote">Una marca estandarizada se vende sola ante inversionistas y franquiciados.</p>
+  </div>
+  <span class="slide__pagenum">04</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5 · VISIÓN DEL PROYECTO -->
+<!-- ============================================================ -->
+<section class="slide slide--dark panel-gradient">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Visión del Proyecto</span>
+  </div>
+  <div class="s5">
+    <div class="accent-line"></div>
+    <p class="s5__quote">Convertir Cool Battery en un sistema de identidad replicable, sólido y listo para escalar — sin depender de interpretaciones individuales en cada nueva unidad.</p>
+  </div>
+  <span class="slide__pagenum">05</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6 · IDENTIDAD VISUAL (ALCANCE FASE 1) -->
+<!-- ============================================================ -->
+<section class="slide">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Alcance · Fase 1</span>
+  </div>
+  <div class="slide__body s6__body">
+    <div>
+      <h2 class="h-title">Identidad Visual</h2>
+      <p class="h-eyebrow" style="margin-top:6px;">Rediseño completo del sistema de marca.</p>
+    </div>
+    <div class="s6__grid">
+      <div class="s6__row"><div class="accent-line"></div><p>Logotipo (versión principal y variaciones)</p></div>
+      <div class="s6__row"><div class="accent-line"></div><p>Familia tipográfica primaria y secundaria</p></div>
+      <div class="s6__row"><div class="accent-line"></div><p>Isotipo / símbolo de marca</p></div>
+      <div class="s6__row"><div class="accent-line"></div><p>Iconografía y elementos gráficos de apoyo</p></div>
+      <div class="s6__row"><div class="accent-line"></div><p>Sistema cromático con códigos exactos (Pantone, CMYK, RGB, HEX)</p></div>
+      <div class="s6__row"><div class="accent-line"></div><p>Aplicaciones base (papelería inicial, avatar, tarjetas)</p></div>
+    </div>
+    <div class="s6__result"><span style="color:var(--cb-green-600); font-weight:700;">Resultado</span><p>Una identidad visual sólida, diferenciada y lista para sistematizar.</p></div>
+  </div>
+  <span class="slide__pagenum">06</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7 · SISTEMA DE MARCA (ALCANCE FASE 2) -->
+<!-- ============================================================ -->
+<section class="slide">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Alcance · Fase 2</span>
+  </div>
+  <div class="slide__body s7__body">
+    <div>
+      <h2 class="h-title">Sistema de Marca</h2>
+      <p class="h-eyebrow" style="margin-top:6px;">Estructura estratégica que sostiene la identidad visual.</p>
+    </div>
+    <div class="s7__grid">
+      <div class="s7__card s7__card--fill">
+        <div class="icon-tile icon-tile--white" style="width:52px;height:52px;"><svg style="width:24px;height:24px;color:var(--cb-green-500)"><use href="#icon-hierarchy"/></svg></div>
+        <div class="s7__card-text"><h4>Arquitectura de Marca</h4><p>Jerarquía si existen submarcas o líneas de producto</p></div>
+      </div>
+      <div class="s7__card s7__card--tint">
+        <div class="icon-tile icon-tile--green" style="width:52px;height:52px;"><svg style="width:24px;height:24px;color:#fff"><use href="#icon-target"/></svg></div>
+        <div class="s7__card-text"><h4>Territorio de Marca</h4><p>Posicionamiento y diferenciadores frente al mercado</p></div>
+      </div>
+      <div class="s7__card s7__card--tint">
+        <div class="icon-tile icon-tile--green" style="width:52px;height:52px;"><svg style="width:24px;height:24px;color:#fff"><use href="#icon-document"/></svg></div>
+        <div class="s7__card-text"><h4>Tono y Personalidad</h4><p>Lineamientos de comunicación escrita</p></div>
+      </div>
+      <div class="s7__card s7__card--fill">
+        <div class="icon-tile icon-tile--white" style="width:52px;height:52px;"><svg style="width:24px;height:24px;color:var(--cb-green-500)"><use href="#icon-layers"/></svg></div>
+        <div class="s7__card-text"><h4>Aplicaciones Extendidas</h4><p>Extensión de la identidad visual a nuevos formatos</p></div>
+      </div>
+    </div>
+    <div class="s7__result"><span style="color:var(--cb-yellow); font-weight:700;">Resultado</span><p>Una marca con criterio definido, no solo con estética definida.</p></div>
+  </div>
+  <span class="slide__pagenum">07</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8 · NÚCLEO DEL PROGRAMA -->
+<!-- ============================================================ -->
+<section class="slide">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Núcleo del Programa</span>
+  </div>
+  <div class="slide__body s8__body">
+    <div>
+      <h2 class="h-title" style="font-size:36px;">Estandarización Integral para Franquicia</h2>
+      <p class="h-eyebrow" style="margin-top:6px; font-size:16px;">Cada pieza que garantiza que la marca se vea idéntica en cada unidad, sin importar quién la opere.</p>
+    </div>
+    <div class="s8__grid">
+      <div class="s8__card s8__card--fill">
+        <h4>Manual Operativo de Marca</h4><div class="mini-line"></div>
+        <p>Reglas de uso de logo · márgenes y proporciones · paleta cromática con códigos exactos · tipografía · usos incorrectos · versión impresa y digital</p>
+      </div>
+      <div class="s8__card s8__card--tint">
+        <h4>Identidad Física del Punto de Venta</h4><div class="mini-line"></div>
+        <p>Fachada · señalética exterior e interior · rotulación · iluminación de marca · mobiliario · estándares de layout de local</p>
+      </div>
+      <div class="s8__card s8__card--tint">
+        <h4>Papelería y Material Operativo</h4><div class="mini-line"></div>
+        <p>Facturas · menús o catálogos · tarjetas de presentación · sobres · carpetas corporativas · formatos internos</p>
+      </div>
+      <div class="s8__card s8__card--tint">
+        <h4>Uniformes y Presentación de Personal</h4><div class="mini-line"></div>
+        <p>Lineamientos de vestuario con marca · gafetes · aplicaciones de logo en textil</p>
+      </div>
+      <div class="s8__card s8__card--fill">
+        <h4>Kit de Lanzamiento de Nuevas Unidades</h4><div class="mini-line"></div>
+        <p>Checklist de identidad para apertura · plantillas editables · guía de aplicación paso a paso</p>
+      </div>
+      <div class="s8__card s8__card--tint">
+        <h4>Empaque y Material Publicitario Impreso</h4><div class="mini-line"></div>
+        <p>Lineamientos de empaque · señalética de promociones · plantillas de material POP impreso</p>
+      </div>
+    </div>
+    <div class="s8__result"><strong>30+ piezas</strong><p>estandarizadas, documentadas y listas para replicar en cada nueva unidad.</p></div>
+  </div>
+  <span class="slide__pagenum">08</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9 · METODOLOGÍA -->
+<!-- ============================================================ -->
+<section class="slide">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Metodología</span>
+  </div>
+  <div class="slide__body s9__body">
+    <div>
+      <h2 class="h-title">Proceso de trabajo</h2>
+      <p class="h-eyebrow" style="margin-top:6px;">Un proceso estructurado. Cero improvisación.</p>
+    </div>
+    <div class="s9__steps">
+      <div class="s9__step">
+        <div class="s9__step-icon s9__step-icon--green"><svg><use href="#icon-search"/></svg></div>
+        <span class="num-tag">01</span>
+        <h4>Investigación</h4>
+        <p>Análisis de marca actual, competencia y mercado</p>
+      </div>
+      <div class="s9__step">
+        <div class="s9__step-icon s9__step-icon--black"><svg><use href="#icon-design"/></svg></div>
+        <span class="num-tag">02</span>
+        <h4>Diseño</h4>
+        <p>Construcción de identidad visual y sistema de marca</p>
+      </div>
+      <div class="s9__step">
+        <div class="s9__step-icon s9__step-icon--black"><svg><use href="#icon-check-clipboard"/></svg></div>
+        <span class="num-tag">03</span>
+        <h4>Validación</h4>
+        <p>Presentación de propuestas y ajustes con el cliente</p>
+      </div>
+      <div class="s9__step">
+        <div class="s9__step-icon s9__step-icon--black"><svg><use href="#icon-document"/></svg></div>
+        <span class="num-tag">04</span>
+        <h4>Documentación</h4>
+        <p>Desarrollo del manual y estandarización completa</p>
+      </div>
+      <div class="s9__step">
+        <div class="s9__step-icon s9__step-icon--green"><svg><use href="#icon-launch"/></svg></div>
+        <span class="num-tag">05</span>
+        <h4>Entrega</h4>
+        <p>Archivos finales, manual de marca y kit de lanzamiento</p>
+      </div>
+    </div>
+  </div>
+  <span class="slide__pagenum">09</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 10 · CRONOGRAMA GENERAL -->
+<!-- ============================================================ -->
+<section class="slide">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Cronograma General</span>
+  </div>
+  <div class="slide__body s10__body">
+    <h2 class="h-title">Línea de tiempo del proyecto</h2>
+    <div class="s10__row">
+      <span class="row-label">Investigación</span>
+      <div class="s10__track"><div class="s10__fill s10__fill--green" style="width:34%;"></div></div>
+      <span class="row-value">1.5 semanas</span>
+    </div>
+    <div class="s10__row">
+      <span class="row-label">Diseño de Identidad</span>
+      <div class="s10__track"><div class="s10__fill s10__fill--black" style="width:90%;"></div></div>
+      <span class="row-value">4 semanas</span>
+    </div>
+    <div class="s10__row">
+      <span class="row-label">Validación y Ajustes</span>
+      <div class="s10__track"><div class="s10__fill s10__fill--green" style="width:34%;"></div></div>
+      <span class="row-value">1.5 semanas</span>
+    </div>
+    <div class="s10__row">
+      <span class="row-label">Documentación y Manual</span>
+      <div class="s10__track"><div class="s10__fill s10__fill--black" style="width:90%;"></div></div>
+      <span class="row-value">4 semanas</span>
+    </div>
+    <div class="s10__row">
+      <span class="row-label">Entrega Final</span>
+      <div class="s10__track"><div class="s10__fill s10__fill--green" style="width:23%;"></div></div>
+      <span class="row-value">1 semana</span>
+    </div>
+    <div class="s10__total"><strong>Duración total del proyecto</strong><p>12 semanas (≈ 3 meses)</p></div>
+  </div>
+  <span class="slide__pagenum">10</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 11 · ENTREGABLES FINALES -->
+<!-- ============================================================ -->
+<section class="slide slide--dark panel-gradient">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Entregables Finales</span>
+  </div>
+  <div class="slide__body s11__body">
+    <h2 class="h-title">Todo lo que el cliente recibe</h2>
+    <div class="s11__grid">
+      <div class="s11__item"><div class="ic"><svg><use href="#icon-document"/></svg></div><p>Manual de marca completo (digital + impreso)</p></div>
+      <div class="s11__item"><div class="ic"><svg><use href="#icon-storefront"/></svg></div><p>Lineamientos de identidad física de punto de venta</p></div>
+      <div class="s11__item"><div class="ic"><svg><use href="#icon-layers"/></svg></div><p>Logotipo y sistema visual en todos los formatos de archivo</p></div>
+      <div class="s11__item"><div class="ic"><svg><use href="#icon-folder"/></svg></div><p>Papelería y material operativo con identidad aplicada</p></div>
+      <div class="s11__item"><div class="ic"><svg><use href="#icon-check-clipboard"/></svg></div><p>Manual operativo de estandarización para franquicia</p></div>
+      <div class="s11__item"><div class="ic"><svg><use href="#icon-uniform"/></svg></div><p>Lineamientos de uniformes y presentación de personal</p></div>
+      <div class="s11__item"><div class="ic"><svg><use href="#icon-launch"/></svg></div><p>Kit de lanzamiento para nuevas unidades</p></div>
+    </div>
+    <div class="s11__callout">Todo lo necesario para abrir la unidad número 2, la 10 y la 50 — con la misma identidad exacta.</div>
+  </div>
+  <span class="slide__pagenum">11</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 12 · RETORNO DE INVERSIÓN ESPERADO -->
+<!-- ============================================================ -->
+<section class="slide">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Retorno de Inversión Esperado</span>
+  </div>
+  <div class="slide__body s12__body">
+    <h2 class="h-title">Por qué esto es infraestructura, no gasto</h2>
+    <div class="s12__row s12__row--tint">
+      <span class="num-tag">01</span>
+      <div class="icn"><svg><use href="#icon-launch"/></svg></div>
+      <p><strong>Apertura Más Rápida</strong> de nuevas unidades al eliminar decisiones de diseño repetidas</p>
+    </div>
+    <div class="s12__row">
+      <span class="num-tag">02</span>
+      <div class="icn"><svg><use href="#icon-shield-bolt"/></svg></div>
+      <p><strong>Menos Costos por Error</strong> reducción de gastos por aplicación de marca no estandarizada</p>
+    </div>
+    <div class="s12__row s12__row--tint">
+      <span class="num-tag">03</span>
+      <div class="icn"><svg><use href="#icon-growth-bars"/></svg></div>
+      <p><strong>Mayor Valor Percibido</strong> de la marca frente a inversionistas y franquiciados</p>
+    </div>
+    <div class="s12__row">
+      <span class="num-tag">04</span>
+      <div class="icn"><svg><use href="#icon-handshake"/></svg></div>
+      <p><strong>Venta de Franquicia Más Fácil</strong> con una identidad sólida, documentada y lista para escalar</p>
+    </div>
+    <p class="s12__quote">Esta inversión no es un gasto de imagen. Es infraestructura para escalar.</p>
+  </div>
+  <span class="slide__pagenum">12</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 13 · INVERSIÓN DEL PROYECTO -->
+<!-- ============================================================ -->
+<section class="slide">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Inversión del Proyecto</span>
+  </div>
+  <div class="slide__body s13__body">
+    <h2 class="h-title">Inversión del proyecto</h2>
+    <p class="h-eyebrow" style="margin-top:6px;">Cobertura de las tres fases del programa, bajo una sola inversión.</p>
+    <div style="margin-top:26px;">
+      <div class="s13__table">
+        <div class="s13__trow s13__trow--noamount">
+          <span class="icn"><svg><use href="#icon-document"/></svg></span>
+          <span class="phase">Fase 1 — Identidad Visual</span>
+        </div>
+        <div class="s13__trow s13__trow--noamount">
+          <span class="icn"><svg><use href="#icon-hierarchy"/></svg></span>
+          <span class="phase">Fase 2 — Sistema de Marca</span>
+        </div>
+        <div class="s13__trow s13__trow--noamount">
+          <span class="icn"><svg><use href="#icon-check-clipboard"/></svg></span>
+          <span class="phase">Fase 3 — Estandarización para Franquicia</span>
+        </div>
+      </div>
+      <div class="s13__total"><span class="label">Inversión Total</span><span class="amount">$7,500</span></div>
+    </div>
+    <p class="s13__terms"><strong>Condiciones de pago:</strong> 50% al inicio · 25% al completar la presentación de diseño · 25% tras la aprobación final del diseño. Pago en efectivo.</p>
+  </div>
+  <span class="slide__pagenum">13</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 14 · TÉRMINOS Y CONDICIONES -->
+<!-- ============================================================ -->
+<section class="slide">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Términos y Condiciones</span>
+  </div>
+  <div class="slide__body s14__body">
+    <h2 class="h-title">Alcance y condiciones del acuerdo</h2>
+    <div class="s14__item"><span class="num-tag">01</span><p>Vigencia de esta propuesta: 10 días</p></div>
+    <div class="s14__item"><span class="num-tag">02</span><p>Incluye 2 rondas de revisión por fase; rondas adicionales tienen un costo de $100 USD por hora</p></div>
+    <div class="s14__item"><span class="num-tag">03</span><p>No incluye producción física de señalética, mobiliario ni impresión de materiales (solo diseño y especificaciones)</p></div>
+    <div class="s14__item"><span class="num-tag">04</span><p>No incluye desarrollo digital, web ni redes sociales (fuera de alcance de este proyecto)</p></div>
+    <div class="s14__item"><span class="num-tag">05</span><p>Tiempos de entrega sujetos a disponibilidad de información y aprobaciones oportunas del cliente</p></div>
+  </div>
+  <span class="slide__pagenum">14</span>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 15 · SIGUIENTE PASO (CIERRE) -->
+<!-- ============================================================ -->
+<section class="slide slide--dark panel-gradient">
+  <div class="slide__topbar">
+    <span class="kicker">Rebranding · Cool Battery</span>
+    <span class="kicker">Siguiente Paso</span>
+  </div>
+  <div class="s15">
+    <h2 class="s15__title">Una marca franquiciable no se improvisa.</h2>
+    <p class="s15__sub">Se diseña, se documenta y se estandariza una sola vez — para replicarse sin fricción.</p>
+    <div class="s15__cta">
+      <div class="s15__next">
+        <div class="ic"><svg><use href="#icon-signature"/></svg></div>
+        <p><strong>Siguiente paso:</strong> Firma de propuesta + pago inicial para arrancar Fase 1.</p>
+      </div>
+      <div class="logo-mark">
+        <div class="logo-mark__cool">COOL<span class="logo-mark__reg">®</span></div>
+        <div class="logo-mark__battery">BATTERY</div>
+      </div>
+    </div>
+    <div class="s15__signfields">
+      <div class="s15__field">
+        <span class="s15__field-label">Nombre</span>
+        <span class="s15__field-line"></span>
+      </div>
+      <div class="s15__field">
+        <span class="s15__field-label">Contacto</span>
+        <span class="s15__field-line"></span>
+      </div>
+      <div class="s15__field">
+        <span class="s15__field-label">Correo</span>
+        <span class="s15__field-line"></span>
+      </div>
+      <div class="s15__field">
+        <span class="s15__field-label">Firma</span>
+        <span class="s15__field-line"></span>
+      </div>
+    </div>
+  </div>
+  <span class="slide__pagenum">15</span>
+</section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,330 @@
+/* =========================================================
+   COOL BATTERY — REBRANDING ESTRATÉGICO
+   Sistema de estilos para presentación
+   Tipografía: Montserrat (títulos) + Red Hat Display (cuerpo)
+   ========================================================= */
+
+:root {
+  /* Paleta de marca */
+  --cb-green-900: #04140c;
+  --cb-green-800: #0a2a18;
+  --cb-green-700: #0f4024;
+  --cb-green-600: #146b36;
+  --cb-green-500: #1c8f45;
+  --cb-green-400: #239e4d;
+  --cb-green-tint: #eaf5ee;
+  --cb-yellow: #f4c81a;
+  --cb-yellow-deep: #d9a812;
+  --cb-black: #0b0c0c;
+  --cb-ink: #14181a;
+  --cb-gray-600: #5b6670;
+  --cb-gray-400: #8b95a0;
+  --cb-gray-200: #d9dfe3;
+  --cb-gray-100: #eef1f3;
+  --cb-white: #ffffff;
+
+  /* Tipografía */
+  --font-display: "Montserrat", "Segoe UI", sans-serif;
+  --font-body: "Red Hat Display", "Segoe UI", sans-serif;
+
+  /* Slide geometry (16:9) */
+  --slide-w: 1280px;
+  --slide-h: 720px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #1b1f22;
+  font-family: var(--font-body);
+  color: var(--cb-ink);
+}
+
+.deck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0 120px;
+}
+
+.slide {
+  position: relative;
+  width: var(--slide-w);
+  height: var(--slide-h);
+  background: var(--cb-white);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  flex-shrink: 0;
+}
+
+.slide__pagenum {
+  position: absolute;
+  bottom: 28px;
+  right: 40px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--cb-gray-400);
+  font-weight: 500;
+  z-index: 5;
+}
+
+.slide--dark .slide__pagenum {
+  color: rgba(255,255,255,0.5);
+}
+
+/* ---------- Top bar / kicker row ---------- */
+.slide__topbar {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--cb-gray-200);
+  z-index: 5;
+}
+
+.slide--dark .slide__topbar {
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.kicker {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cb-gray-600);
+}
+
+.slide--dark .kicker {
+  color: rgba(255,255,255,0.65);
+}
+
+.kicker--accent {
+  color: var(--cb-green-500);
+}
+
+/* ---------- Typography helpers ---------- */
+.h-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--cb-black);
+  line-height: 1.05;
+}
+
+.slide--dark .h-display {
+  color: var(--cb-white);
+}
+
+.h-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 44px;
+  color: var(--cb-black);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+.slide--dark .h-title {
+  color: var(--cb-white);
+}
+
+.h-eyebrow {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--cb-gray-600);
+  font-weight: 300; /* thin — texto de acompañamiento */
+}
+
+.slide--dark .h-eyebrow {
+  color: rgba(255,255,255,0.75);
+}
+
+.body-text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--cb-gray-600);
+  line-height: 1.5;
+  font-weight: 400; /* regular — cuerpo de párrafo */
+}
+
+.slide--dark .body-text {
+  color: rgba(255,255,255,0.72);
+}
+
+.num-tag {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--cb-yellow-deep);
+  font-size: 22px;
+}
+
+.slide--dark .num-tag {
+  color: var(--cb-yellow);
+}
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background: var(--cb-gray-200);
+}
+
+.slide--dark .rule {
+  background: rgba(255,255,255,0.2);
+}
+
+.accent-line {
+  width: 56px;
+  height: 3px;
+  background: var(--cb-yellow);
+  border-radius: 2px;
+}
+
+/* ---------- Icon tiles ---------- */
+.icon-tile {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-tile--white {
+  background: var(--cb-white);
+}
+.icon-tile--green {
+  background: var(--cb-green-500);
+}
+.icon-tile--black {
+  background: var(--cb-black);
+}
+.icon-tile--tint {
+  background: var(--cb-green-tint);
+}
+
+.icon-tile svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* ---------- Gradient side panel ---------- */
+.panel-gradient {
+  background: linear-gradient(160deg, #1c8f45 0%, #0f4024 45%, #04140c 100%);
+  position: relative;
+}
+
+.panel-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+/* ---------- Logo badge ---------- */
+.logo-badge {
+  width: 128px;
+  height: 90px;
+  background: var(--cb-white);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.logo-badge img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* ---------- Footer callout bars ---------- */
+.callout {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 26px 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 17px;
+}
+
+.callout--black {
+  background: var(--cb-black);
+  color: var(--cb-white);
+}
+.callout--green {
+  background: var(--cb-green-500);
+  color: var(--cb-white);
+}
+.callout--tint {
+  background: var(--cb-green-tint);
+  color: var(--cb-ink);
+}
+
+.callout strong {
+  color: var(--cb-yellow);
+  font-weight: 700;
+}
+.callout--tint strong {
+  color: var(--cb-green-500);
+}
+
+/* =========================================================
+   PRINT / EXPORT TO PDF
+   Tamaño de página exacto 1280x720px (16:9) en orientación
+   horizontal, sin márgenes, con colores de fondo forzados.
+   ========================================================= */
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    background: none;
+    width: 1280px;
+  }
+  .deck {
+    gap: 0;
+    padding: 0;
+    align-items: stretch;
+  }
+  .slide {
+    box-shadow: none;
+    width: 1280px;
+    height: 720px;
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-after: page;
+    break-inside: avoid;
+  }
+  .slide:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+  /* Fuerza la impresión de colores de fondo y gradientes */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}
