@@ -8,6 +8,10 @@
   left: 40px;
   right: 40px;
   bottom: 0;
+  padding-bottom: 16px; /* margen de seguridad: evita que el último elemento
+                            (ej. copys/quotes en flex con justify-content o
+                            flex:1) quede pegado al borde recortado por
+                            overflow:hidden del .slide */
 }
 
 /* ---------- Logo recreation (Cool Battery) ----------
@@ -89,7 +93,7 @@
 .s1__tagline { font-family: var(--font-display); font-weight:700; font-size:22px; color: var(--cb-white); line-height:1.35; }
 
 /* ================= SLIDE 2 — DIAGNÓSTICO ================= */
-.s2 { display:flex; gap:56px; height: calc(100% - 20px); }
+.s2 { display:flex; gap:56px; }
 .s2__left { flex: 1.35; display:flex; flex-direction:column; gap:22px; padding-top: 6px;}
 .s2__list { display:flex; flex-direction:column; }
 .s2__item { display:flex; gap:22px; padding: 16px 0; border-bottom: 1px solid var(--cb-gray-100); align-items:flex-start; }
@@ -105,22 +109,44 @@
   justify-content:space-between;
   color: var(--cb-white);
 }
-.s2__right .big-num { font-family: var(--font-display); font-weight:900; font-size:96px; color:var(--cb-white); line-height:1;}
+.s2__right .big-num { font-family: var(--font-display); font-weight:900; font-size:96px; color:#ffffff; line-height:1;}
 .s2__right .label { font-size:14px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color: rgba(255,255,255,0.85); line-height:1.4;}
-.s2__right .quote { font-style: italic; font-weight:300; font-size:15px; color: rgba(255,255,255,0.85); border-top:1px solid rgba(255,255,255,0.25); padding-top:16px; }
+.s2__right .quote {
+  display: block;
+  position: relative;
+  z-index: 2;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 15px;
+  color: #ffffff;
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding-top: 16px;
+  margin-top: auto;
+}
 
 /* ================= SLIDE 3 — PROBLEMA DE FONDO ================= */
-.s3__body { display:flex; flex-direction:column; gap:34px; height:100%; padding-top: 4px;}
+.s3__body { display:flex; flex-direction:column; gap:34px; padding-top: 4px;}
 .s3__cols { display:grid; grid-template-columns: repeat(4, 1fr); gap: 26px; flex:1; }
 .s3__col { display:flex; flex-direction:column; gap:14px; border-top: 1px solid rgba(255,255,255,0.25); padding-top:18px; }
 .s3__col-icon { width:44px; height:44px; border-radius:50%; background: rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; }
 .s3__col-icon svg { width:22px; height:22px; color: var(--cb-yellow); }
 .s3__col h4 { font-family: var(--font-display); font-weight:700; font-size:19px; color: var(--cb-white); line-height:1.25; }
 .s3__col p { font-size:14.5px; color: rgba(255,255,255,0.72); line-height:1.5; }
-.s3__quote { font-style:italic; font-weight:300; font-size:19px; color: var(--cb-yellow); font-family: var(--font-body); }
+.s3__quote {
+  display: block;
+  position: relative;
+  z-index: 2;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 19px;
+  color: #f4c81a;
+  font-family: var(--font-body);
+  margin-top: auto;
+  flex-shrink: 0;
+}
 
 /* ================= SLIDE 4 — LA OPORTUNIDAD ================= */
-.s4__body { display:flex; flex-direction:column; gap:18px; height:100%; min-height:0; }
+.s4__body { display:flex; flex-direction:column; gap:18px; }
 .s4__cards { display:grid; grid-template-columns: repeat(4,1fr); gap:18px; flex:1; min-height:0; }
 .s4__card { border-radius: 4px; padding: 22px 20px; display:flex; flex-direction:column; gap:12px; min-height:0; }
 .s4__card--fill { background: var(--cb-green-500); color: var(--cb-white); }
@@ -156,7 +182,7 @@
 .s5__quote { font-family: var(--font-display); font-weight:700; font-size:42px; color: var(--cb-white); line-height:1.35; max-width: 980px; }
 
 /* ================= SLIDE 6 — IDENTIDAD VISUAL (alcance f1) ================= */
-.s6__body { display:flex; flex-direction:column; gap:26px; height:100%; }
+.s6__body { display:flex; flex-direction:column; gap:26px; }
 .s6__grid { display:grid; grid-template-columns: 1fr 1fr; gap: 30px 60px; flex:1; align-content:start; }
 .s6__row { display:flex; flex-direction:column; gap:10px; }
 .s6__row p { font-family: var(--font-body); font-size:17px; color: var(--cb-ink); font-weight:400; }
@@ -171,7 +197,7 @@
 .s6__result strong { color: var(--cb-green-600); font-weight:700; }
 
 /* ================= SLIDE 7 — SISTEMA DE MARCA (alcance f2) ================= */
-.s7__body { display:flex; flex-direction:column; gap:22px; height:100%; }
+.s7__body { display:flex; flex-direction:column; gap:22px; }
 .s7__grid { display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 18px; flex:1; }
 .s7__card { border-radius:4px; padding: 26px 30px; display:flex; gap:20px; align-items:flex-start; }
 .s7__card--fill { background: var(--cb-green-500); color:#fff; }
@@ -188,7 +214,7 @@
 .s7__result strong { color: var(--cb-yellow); font-weight:700; }
 
 /* ================= SLIDE 8 — NÚCLEO DEL PROGRAMA ================= */
-.s8__body { display:flex; flex-direction:column; gap:18px; height:100%; }
+.s8__body { display:flex; flex-direction:column; gap:18px; }
 .s8__grid { display:grid; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(2,1fr); gap:14px; flex:1; }
 .s8__card { border-radius:4px; padding: 20px 22px; display:flex; flex-direction:column; gap:10px; }
 .s8__card--fill { background: var(--cb-green-500); color:#fff; }
@@ -205,7 +231,7 @@
 .s8__result strong { color: var(--cb-yellow); font-weight:800; }
 
 /* ================= SLIDE 9 — METODOLOGÍA ================= */
-.s9__body { height:100%; display:flex; flex-direction:column; gap:40px; padding-top: 30px; }
+.s9__body { display:flex; flex-direction:column; gap:40px; padding-top: 30px; }
 .s9__steps { display:flex; justify-content:space-between; position:relative; padding: 0 20px; }
 .s9__steps::before {
   content:""; position:absolute; top:38px; left:70px; right:70px; height:1px;
@@ -224,7 +250,7 @@
 .s9__step p { font-size:13.5px; color: var(--cb-gray-600); line-height:1.4; }
 
 /* ================= SLIDE 10 — CRONOGRAMA ================= */
-.s10__body { display:flex; flex-direction:column; gap:22px; height:100%; padding-top: 10px; }
+.s10__body { display:flex; flex-direction:column; gap:22px; padding-top: 10px; }
 .s10__row { display:flex; align-items:center; gap:26px; }
 .s10__row .row-label { width: 220px; font-family: var(--font-display); font-weight:700; font-size:17px; color: var(--cb-black); flex-shrink:0; }
 .s10__track { flex:1; height:34px; background: var(--cb-green-tint); border-radius:4px; position:relative; overflow:hidden; }
@@ -236,7 +262,7 @@
 .s10__total strong { color: var(--cb-yellow); font-weight:800; }
 
 /* ================= SLIDE 11 — ENTREGABLES FINALES ================= */
-.s11__body { display:flex; flex-direction:column; gap:26px; height:100%; padding-top: 10px;}
+.s11__body { display:flex; flex-direction:column; gap:26px; padding-top: 10px;}
 .s11__grid { display:grid; grid-template-columns:1fr 1fr; gap: 20px 60px; flex:1; align-content:start; }
 .s11__item { display:flex; gap:16px; align-items:flex-start; }
 .s11__item .ic { width:30px; height:30px; border-radius:50%; background: rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
@@ -245,7 +271,7 @@
 .s11__callout { background: var(--cb-green-500); border-radius:4px; padding:22px 30px; font-style:italic; font-weight:300; font-size:18px; color:#fff; margin-top:auto; }
 
 /* ================= SLIDE 12 — ROI ESPERADO ================= */
-.s12__body { display:flex; flex-direction:column; gap:14px; height:100%; padding-top: 4px;}
+.s12__body { display:flex; flex-direction:column; gap:14px; padding-top: 4px;}
 .s12__row { display:flex; align-items:center; gap:24px; padding: 18px 22px; border-radius:4px; }
 .s12__row--tint { background: var(--cb-green-tint); }
 .s12__row .icn { width:46px; height:46px; border-radius:50%; background: var(--cb-white); display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow: 0 2px 6px rgba(0,0,0,0.08);}
@@ -256,7 +282,7 @@
 .s12__quote { font-style:italic; font-weight:300; font-size:19px; color: var(--cb-green-600); margin-top:auto; }
 
 /* ================= SLIDE 13 — COTIZACIÓN POR FASE ================= */
-.s13__body { display:flex; flex-direction:column; height:100%; padding-top: 10px; }
+.s13__body { display:flex; flex-direction:column; padding-top: 10px; }
 .s13__table { border: 1px solid var(--cb-gray-200); border-radius: 4px; overflow:hidden; }
 .s13__trow { display:flex; justify-content:space-between; align-items:center; padding: 24px 30px; border-bottom: 1px solid var(--cb-gray-200); }
 .s13__trow:last-child { border-bottom:none; }
@@ -273,7 +299,7 @@
 .s13__terms strong { color: var(--cb-green-600); }
 
 /* ================= SLIDE 14 — TÉRMINOS Y CONDICIONES ================= */
-.s14__body { display:flex; flex-direction:column; gap: 30px; height:100%; padding-top: 14px; }
+.s14__body { display:flex; flex-direction:column; gap: 30px; padding-top: 14px; }
 .s14__item { display:flex; gap:26px; align-items:flex-start; padding-bottom:22px; border-bottom:1px solid var(--cb-gray-100); }
 .s14__item:last-child { border-bottom: none; }
 .s14__item .num-tag { width:34px; flex-shrink:0; }
