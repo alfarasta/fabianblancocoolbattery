@@ -120,17 +120,36 @@
 .s3__quote { font-style:italic; font-weight:300; font-size:19px; color: var(--cb-yellow); font-family: var(--font-body); }
 
 /* ================= SLIDE 4 — LA OPORTUNIDAD ================= */
-.s4__body { display:flex; flex-direction:column; gap:22px; height:100%; min-height:0; }
-.s4__cards { display:grid; grid-template-columns: repeat(4,1fr); gap:20px; flex:1; min-height:0; }
-.s4__card { border-radius: 4px; padding: 26px 22px; display:flex; flex-direction:column; gap:14px; min-height:0; }
+.s4__body { display:flex; flex-direction:column; gap:18px; height:100%; min-height:0; }
+.s4__cards { display:grid; grid-template-columns: repeat(4,1fr); gap:18px; flex:1; min-height:0; }
+.s4__card { border-radius: 4px; padding: 22px 20px; display:flex; flex-direction:column; gap:12px; min-height:0; }
 .s4__card--fill { background: var(--cb-green-500); color: var(--cb-white); }
 .s4__card--tint { background: var(--cb-green-tint); color: var(--cb-ink); }
-.s4__card h4 { font-family: var(--font-display); font-weight:700; font-size:18px; margin: 4px 0 0; line-height:1.25;}
+.s4__card .icon-tile { width:50px; height:50px; }
+.s4__card .icon-tile svg { width:24px; height:24px; }
+.s4__card h4 { font-family: var(--font-display); font-weight:700; font-size:16.5px; margin: 2px 0 0; line-height:1.2;}
 .s4__card--tint h4 { color: var(--cb-black); }
-.s4__card p { font-size:13.5px; line-height:1.45; margin-top:6px; }
-.s4__card--fill p { color: rgba(255,255,255,0.85); }
-.s4__card--tint p { color: var(--cb-gray-600); }
-.s4__quote { font-style:italic; font-weight:300; font-size:18px; color: var(--cb-green-600); flex-shrink:0; }
+.s4__list { list-style:none; display:flex; flex-direction:column; gap:8px; margin-top:6px; }
+.s4__list li {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.35;
+  padding-left: 14px;
+}
+.s4__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.s4__card--fill .s4__list li { color: rgba(255,255,255,0.88); }
+.s4__card--fill .s4__list li::before { background: var(--cb-yellow); }
+.s4__card--tint .s4__list li { color: var(--cb-gray-600); }
+.s4__card--tint .s4__list li::before { background: var(--cb-green-500); }
+.s4__quote { font-style:italic; font-weight:300; font-size:17px; color: var(--cb-green-600); flex-shrink:0; }
 
 /* ================= SLIDE 5 — VISIÓN (full bleed dark) ================= */
 .s5 { height:100%; display:flex; flex-direction:column; justify-content:center; padding: 0 90px; gap: 34px; }
